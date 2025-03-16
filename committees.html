@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GDMUN'25 Committees</title>
+    <link rel="icon" type="png" href="logo.png">
+    <style>
+        /* Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body Styling */
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            color: #e0e0e0; /* Light text */
+            line-height: 1.6;
+            padding: 0; /* Remove any default body padding */
+            margin: 0; /* Remove any default body margin */
+        }
+
+        /* Header Styling */
+        .header {
+            width: 100%;
+            padding: 1rem 0; /* Ensure the header stretches edge-to-edge */
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            background-color: #000000;
+            border-bottom: 5px solid rgba(255, 255, 255, 0.5);
+        }
+
+        .header h1 {
+            font-size: 2rem;
+            font-weight: 500;
+            color: #ffffff;
+        }
+
+        .header .nav a {
+            color: #a8a8a8;
+            text-decoration: none;
+            margin-left: 2rem;
+            font-size: 1rem;
+            font-weight: 400;
+        }
+        .logo {
+            height: 50px;
+            width: auto;
+            padding-right: 15px;
+            padding-left: 5px;
+        }
+        /* Launch Screen Styling */
+        .launch-screen {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100vh; /* Adjust height to cover the entire viewport */
+            position: relative;
+            overflow: hidden; /* Ensure everything stays within bounds */
+        }
+
+        /* Background Container with Blur */
+        .launch-screen-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url(hall.jpg);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            filter: blur(8px);
+            -webkit-filter: blur(8px);
+        }
+
+        /* Title Styling */
+        .title {
+            font-size: 7rem;
+            font-weight: 700;
+            color: #ffffff;
+            letter-spacing: 0.02em;
+            display: inline-block;
+            line-height: 1.2;
+            margin-bottom: 20px;
+            position: relative; /* Ensure the text appears above the background */
+            z-index: 1; /* Bring the text above the blurred background */
+        }
+        .icon {
+            color: #ffffff;
+            display: inline-block;
+            position: relative; /* Ensure the text appears above the background */
+            z-index: 1; /* Bring the text above the blurred background */
+        }
+        /* Sphere Container */
+        #sphere-container {
+            width: 100%;
+            height: 50vh; /* Adjust height to fit below the launch screen container */
+            background-color: #000000;
+        }
+        #wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            background-color: #000000;
+        }
+        #tagline {
+            width: 40%;
+            margin-left: 2rem;
+            color: #a8a8a8;
+            font-size: 1.2rem;
+            background-color: inherit;
+        }
+        /* Section Styling */
+        .section {
+            width: 100%;
+            max-width: 1200px;
+            margin: 4rem 0;
+            text-align: center;
+        }
+
+        .section h2 {
+            font-size: 2rem;
+            color: #ffffff;
+            margin-bottom: 1rem;
+        }
+
+        .section p {
+            color: #a8a8a8;
+            margin-bottom: 1.5rem;
+        }
+
+        /* Footer */
+        footer {
+            margin-top: 4rem;
+            padding: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            text-align: center;
+        }
+
+        footer p {
+            color: #707070;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header with Navigation -->
+    <div class="header">
+        <img src="logo.png" alt="GDMUN'25" class="logo" />
+        <h1>GDMUN'25</h1>
+        <div class="nav">
+            <a href="index.html">Home</a>
+            <a href="team.html">Team</a>
+            <a href="#registration">Registration</a>
+        </div>
+    </div>
+
+
+        <!-- Title Text -->
+        
+        <div class="bloom-effect">
+            <div class="title">GDMUN<br><span style="margin-top: 0px;">2025-26</span></div><img src="logo.png" class="icon">
+        </div>
+    </div>
+
+    <!-- Sphere Container (Below the Launch Screen) -->
+    <div id="wrapper">
+        <div id="sphere-container"></div>
+        <br>
+        <h1> What is GDMUN</h1>
+        </br>
+        <p class="tagline">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis egestas rhoncus. Nullam tincidunt, nisi et facilisis malesuada, augue justo fringilla neque, eu gravida purus mauris non quam.</p>
+    </div>
+    </div>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <h2>Specialized Kits for Aspiring Artists, Entrepreneurs, and Personal Growth</h2>
+        <div class="cards">
+            <div class="card">
+                <h3>Artist Kits</h3>
+                <p>Comprehensive kits with all the essentials to unleash your creative potential.</p>
+            </div>
+            <div class="card">
+                <h3>Entrepreneur Kits</h3>
+                <p>Equip yourself with the tools and resources to turn your business ideas into reality.</p>
+            </div>
+            <div class="card">
+                <h3>Personal Growth Kits</h3>
+                <p>Discover kits designed to help you embark on your journey of self-discovery and transformation.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Registration Section -->
+    <section id="registration" class="section">
+        <h2>Expert-Crafted Online Courses</h2>
+        <div class="flow-chart">
+            <div class="flow-item">
+                <span class="flow-number">1</span>
+                <h3>Convenience</h3>
+                <p>Learn at your own pace from the comfort of your home.</p>
+            </div>
+            <div class="flow-arrow">→</div>
+            <div class="flow-item">
+                <span class="flow-number">2</span>
+                <h3>Interactivity</h3>
+                <p>Engage with course materials and connect with fellow learners.</p>
+            </div>
+            <div class="flow-arrow">→</div>
+            <div class="flow-item">
+                <span class="flow-number">3</span>
+                <h3>Expertise</h3>
+                <p>Benefit from the guidance of industry-leading instructors.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>Created by <a href="https://github.com/SleeperOfSaturn">Sannidhya Sharma</a> | Hosted by GD Goenka, Jammu</p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script>
+        // Scene setup
+        const scene = new THREE.Scene();
+        const sphereContainer = document.getElementById('sphere-container');
+        const renderer = new THREE.WebGLRenderer({ antialias: true });
+        renderer.setSize(sphereContainer.clientWidth, sphereContainer.clientHeight);
+        renderer.setClearColor(0x000000);
+        sphereContainer.appendChild(renderer.domElement);
+
+        const camera = new THREE.PerspectiveCamera(75, sphereContainer.clientWidth / sphereContainer.clientHeight, 0.1, 1000);
+        camera.position.z = 10;
+
+        // Create evenly distributed dots on a sphere
+        const points = [];
+        const numPoints = 1000;
+        const radius = 4;
+
+        for (let i = 0; i < numPoints; i++) {
+            const theta = Math.acos(2 * Math.random() - 1);
+            const phi = 2 * Math.PI * Math.random();
+
+            const x = radius * Math.sin(theta) * Math.cos(phi);
+            const y = radius * Math.sin(theta) * Math.sin(phi);
+            const z = radius * Math.cos(theta);
+
+            points.push(new THREE.Vector3(x, y, z));
+        }
+
+        const geometry = new THREE.BufferGeometry().setFromPoints(points);
+        const material = new THREE.PointsMaterial({ color: 0xffffff, size: 0.05 });
+        const dotSphere = new THREE.Points(geometry, material);
+        scene.add(dotSphere);
+
+        function animate() {
+            requestAnimationFrame(animate);
+            dotSphere.rotation.y += 0.005;
+            dotSphere.rotation.x += 0.002;
+            renderer.render(scene, camera);
+        }
+
+        animate();
+
+        // Handle window resize and adjust aspect ratio
+        window.addEventListener('resize', () => {
+            const width = sphereContainer.clientWidth;
+            const height = sphereContainer.clientHeight;
+            renderer.setSize(width, height);
+            camera.aspect = width / height;
+            camera.updateProjectionMatrix();
+        });
+    </script>
+</body>
+</html>
+
