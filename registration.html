@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GDMUN'25 - Committees</title>
+    <title>Registration - GDMUN'25</title>
     <link rel="icon" type="png" href="logo.png">
     <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Tinos:wght@400;700&display=swap" rel="stylesheet">
@@ -72,75 +72,59 @@
                 display: none;
                 position: absolute;
                 top: 60px;
-                right: 10px;
+                right: 0;
                 background-color: #171717;
                 border: 1px solid rgba(255, 255, 255, 0.2);
                 border-radius: 5px;
-                width: 150px;
+                width: 100%;
                 flex-direction: column;
+                z-index: 1000;
             }
             .nav.show {
                 display: flex;
             }
             .nav a {
-                padding: 10px;
+                padding: 15px;
                 text-align: center;
+                display: block;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.1);
             }
         }
-        
-        /* Wrapper */
-        #wrapper {
+
+        /* Registration Section */
+        .registration-container {
             display: flex;
             flex-direction: column;
             align-items: center;
-            padding: 2rem;
+            justify-content: center;
+            height: 80vh;
+            gap: 20px;
             text-align: center;
+            padding: 2rem;
         }
-
-        /* Title Styling */
-        .about-title {
-            font-size: 2rem;
+        .registration-title {
+            font-size: 2.5rem;
             color: #ecc55a;
             text-shadow: 1px 0 10px #101010;
-            margin-bottom: 0.5rem;
-        }
-
-        /* Normal text styling */
-        .tagline {
-            max-width: 90%;
-            font-size: 1rem;
-            color: #a8a8a8;
-        }
-        
-        /* Committees Section */
-        .committees-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-            padding: 2rem;
-            text-align: center;
-        }
-        .committee-box {
-            background-color: #222;
-            padding: 1rem;
-            border-radius: 10px;
-            position: relative;
-            overflow: hidden;
-            transition: transform 0.3s ease-in-out;
-        }
-        .committee-box:hover {
-            transform: scale(1.05);
-        }
-        .committee-logo {
-            width: 100px;
-            height: 100px;
             margin-bottom: 1rem;
         }
-        .committee-name {
+        .registration-button {
+            background-color: #ecc55a;
+            color: #000;
+            padding: 15px 40px;
+            border: none;
+            border-radius: 5px;
             font-size: 1.2rem;
-            color: #ecc55a;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            transition: background 0.3s ease-in-out, transform 0.2s;
         }
-        
+        .registration-button:hover {
+            background-color: #d4a54a;
+            transform: scale(1.05);
+        }
+
         /* Footer */
         footer {
             text-align: center;
@@ -159,46 +143,43 @@
         </div>
         <div class="nav" id="nav-menu">
             <a href="index.html" onclick="closeMenu()">Home</a>
-            <a href="#wrapper" onclick="closeMenu()">About</a>
             <a href="team.html" onclick="closeMenu()">Team</a>
             <a href="committees.html" onclick="closeMenu()">Committees</a>
             <a href="registration.html" onclick="closeMenu()">Registration</a>
             <a href="contact.html" onclick="closeMenu()">Contact Us</a>
         </div>
     </div>
-    
-    <div id="wrapper">
-        <h2 class="about-title">Committees</h2>
-        <div class="committees-container">
-            <div class="committee-box">
-                <img src="committee1.png" alt="Committee 1" class="committee-logo">
-                <p class="committee-name">UNSC</p>
-            </div>
-            <div class="committee-box">
-                <img src="committee2.png" alt="Committee 2" class="committee-logo">
-                <p class="committee-name">UNGA</p>
-            </div>
-            <div class="committee-box">
-                <img src="committee3.png" alt="Committee 3" class="committee-logo">
-                <p class="committee-name">UNHRC</p>
-            </div>
-            <div class="committee-box">
-                <img src="committee4.png" alt="Committee 4" class="committee-logo">
-                <p class="committee-name">DISEC</p>
-            </div>
-            <div class="committee-box">
-                <img src="committee5.png" alt="Committee 5" class="committee-logo">
-                <p class="committee-name">WHO</p>
-            </div>
-            <div class="committee-box">
-                <img src="committee6.png" alt="Committee 6" class="committee-logo">
-                <p class="committee-name">ICJ</p>
-            </div>
-        </div>
+
+    <div class="registration-container">
+        <h2 class="registration-title">Register for GDMUN'25</h2>
+        <a href="https://forms.gle/individual" class="registration-button">Individual Registration</a>
+        <a href="https://forms.gle/school" class="registration-button">School Delegation</a>
     </div>
-    
+
     <footer>
         <p>Created by <a href="https://instagram.com/adityasinghthakur_0">Aditya Singh Thakur</a> | Hosted by GD Goenka, Jammu</p>
     </footer>
+
+    <script>
+        function toggleMenu() {
+            const navMenu = document.getElementById("nav-menu");
+            navMenu.classList.toggle("show");
+        }
+
+        function closeMenu() {
+            const navMenu = document.getElementById("nav-menu");
+            navMenu.classList.remove("show");
+        }
+
+        // Close menu when clicking outside
+        document.addEventListener("click", function (event) {
+            const navMenu = document.getElementById("nav-menu");
+            const menuIcon = document.querySelector(".menu-icon");
+
+            if (!navMenu.contains(event.target) && !menuIcon.contains(event.target)) {
+                navMenu.classList.remove("show");
+            }
+        });
+    </script>
 </body>
 </html>

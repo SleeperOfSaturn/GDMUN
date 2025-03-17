@@ -14,243 +14,200 @@
             padding: 0;
             box-sizing: border-box;
         }
-        html{
-            background-color: #000000;
+        html {
+            background-color: #000;
+            scroll-behavior: smooth;
         }
-        /* Body Styling */
         body {
-            font-weight: 700; /* Bold weight */
-            color: #e0e0e0; /* Light text */
+            font-weight: 700;
+            color: #e0e0e0;
             line-height: 1.6;
-            padding: 0; /* Remove any default body padding */
-            margin: 0; /* Remove any default body margin */
+            font-family: 'Rubik', sans-serif;
         }
-
-
-
-        /* Header Styling */
+        
+        /* Header */
         .header {
-            width: 100%;
-            padding: 1rem 0; /* Ensure the header stretches edge-to-edge */
             display: flex;
-            justify-content: flex-start;
             align-items: center;
+            justify-content: space-between;
             background-color: #171717;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.5);
-        }
-
-        .header h1 {
-            font-size: 2rem;
-            font-weight: 500;
-            color: #ffffff;
-        }
-
-        .header .nav a {
-            color: #a8a8a8;
-            text-decoration: none;
-            margin-left: 2rem;
-            font-size: 1rem;
-            font-weight: 400;
+            padding: 1rem;
+            position: relative;
         }
         .logo {
-            height: 60px;
-            width: auto;
-            padding-right: 15px;
-            padding-left: 5px;
-            
+            height: 50px;
         }
-        /* Launch Screen Styling */
+        .menu-icon {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+        }
+        .menu-icon div {
+            width: 30px;
+            height: 4px;
+            background-color: #a8a8a8;
+        }
+        
+        /* Dropdown Menu */
+        .nav {
+            display: flex;
+            gap: 15px;
+        }
+        .nav a {
+            color: #e0e0e0;
+            text-decoration: none;
+            font-size: 1rem;
+            cursor: pointer;
+        }
+        .nav a:hover {
+            color: #ecc55a;
+        }
+        
+        @media (max-width: 768px) {
+            .menu-icon {
+                display: flex;
+            }
+            .nav {
+                display: none;
+                position: absolute;
+                top: 60px;
+                right: 0;
+                background-color: #171717;
+                border: 1px solid rgba(255, 255, 255, 0.2);
+                border-radius: 5px;
+                width: 100%;
+                flex-direction: column;
+                z-index: 1000;
+            }
+            .nav.show {
+                display: flex;
+            }
+            .nav a {
+                padding: 15px;
+                text-align: center;
+                display: block;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            }
+        }
+        
+        /* Launch Screen */
         .launch-screen {
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            width: 100%;
-            height: 100vh; /* Adjust height to cover the entire viewport */
+            height: 100vh;
             position: relative;
-            overflow: hidden; /* Ensure everything stays within bounds */
+            overflow: hidden;
+            text-align: center;
+            padding: 1rem;
         }
-
-        /* Background Container with Blur */
         .launch-screen-background {
             position: absolute;
             top: 0;
             left: 0;
-            right: 0;
-            bottom: 0;
-            background-image: url(hall.jpg);
+            width: 100%;
+            height: 100%;
+            background: url('hall.jpg') center/cover no-repeat;
             webkit-mask-image:-webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
             mask-image: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0));
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
             filter: blur(8px);
-            -webkit-filter: blur(8px);
+            z-index: -1;
         }
-
-        /* Title Styling */
         .title {
-            font-size: 7rem;
-            font-weight: 700;
-            font-family: 'Tinos', sans-serif;
+            font-size: 4rem;
             color: #ecc55a;
-            text-shadow: rgb(16, 16, 16) 1.5px 0 20px;
-            letter-spacing: 0.02em;
-            line-height: 1.2;
-            margin-bottom: 50px;
-            position: relative; /* Ensure the text appears above the background */
-            z-index: 1; /* Bring the text above the blurred background */
+            text-shadow: 1.5px 0 20px #101010;
         }
-
-        /* Sphere Container */
+        @media (max-width: 768px) {
+            .title {
+                font-size: 2.5rem;
+            }
+        }
+        
+        /* Wrapper */
+        #wrapper {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem;
+            text-align: center;
+        }
         #sphere-container {
             width: 100%;
             height: 50vh; /* Adjust height to fit below the launch screen container */
             background-color: #000000;
         }
-        #wrapper {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 100%;
-            background-color: #000000;
-            border-radius: 10px;
-        }
-        #tagline {
-            width: 40%;
-            margin-left: 2rem;
-            color: #a8a8a8;
-            font-size: 1.2rem;
-            background-color: inherit;
-            font-family: "Rubik", sans-serif;
-        }
-        /* Section Styling */
-        .section {
-            background-color: #707070;
-            width: 100%;
-            max-width: 1200px;
-            margin: 4rem 0;
-            text-align: center;
-        }
-
-        .section h2 {
+        /* Title Styling */
+        .about-title {
             font-size: 2rem;
-            color: #ffffff;
-            margin-bottom: 1rem;
+            color: #ecc55a;
+            text-shadow: 1px 0 10px #101010;
+            margin-bottom: 0.5rem;
         }
-
-        .section p {
+    
+        /* Normal text styling */
+        .tagline {
+            max-width: 90%;
+            font-size: 1rem;
             color: #a8a8a8;
-            margin-bottom: 1.5rem;
         }
-
+        
         /* Footer */
         footer {
-            margin-top: 4rem;
-            padding: 2rem;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
             text-align: center;
+            padding: 1rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
         }
-
-        footer p {
-            color: #707070;
-        }
-    </style>
+    </style>    
 </head>
 <body>
-
-    <!-- Header with Navigation -->
     <div class="header">
-        <img src="logo.png" alt="GDMUN'25" class="logo" />
-        <h1>GDMUN'25</h1>
-        <div class="nav">
-            <a href="">Home</a>
-            <a href="#about">About</a>
-            <a href="team.html">Team</a>
-            <a href="committees.html">Committees</a>
-            <a href="#registration">Registration</a>
+        <img src="logo.png" alt="GDMUN'25" class="logo">
+        <div class="menu-icon" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div class="nav" id="nav-menu">
+            <a href="index.html" onclick="closeMenu()">Home</a>
+            <a href="#wrapper" onclick="closeMenu()">About</a> <!-- Updated link -->
+            <a href="team.html" onclick="closeMenu()">Team</a>
+            <a href="committees.html" onclick="closeMenu()">Committees</a>
+            <a href="registration.html" onclick="closeMenu()">Registration</a>
+            <a href="contact.html" onclick="closeMenu()">Contact Us</a>
         </div>
     </div>
-
-    <!-- Launch Screen Section (Home) -->
+    
     <div id="home" class="launch-screen">
-        <!-- Background with Blur Effect -->
         <div class="launch-screen-background"></div>
-
-        <!-- Title Text -->
-        
-        <div class="bloom-effect">
-            <div class="title">GDMUN'25<br><span style="margin-top: 0px;"></span></div>
-        </div>
+        <div class="title">GDMUN'25</div>
     </div>
-    <!-- Sphere Container (Below the Launch Screen) -->
+    
+    <!-- ABOUT SECTION WITH FIXED STYLING -->
     <div id="wrapper">
-        <div id="sphere-container"></div>
-        <br>
-        </br>
-        <p class="tagline"><b>What is GDMUN?</b>
-            <br>
+    <div style="display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 2rem; max-width: 90vw;">
+        <!-- Sphere Container -->
+        <div id="sphere-container" style="flex: 1; min-width: 300px; height: 50vh; background-color: #000000;"></div>
+        
+        <!-- About Section -->
+            <div style="flex: 1; min-width: 300px; text-align: left;">
+                <h2 class="about-title">What is GDMUN?</h2>
+                <p class="tagline">At this point, do we even need to ask? Some of us have been here before, arguing, negotiating, surviving on caffeine and last-minute research. 
 
-            At this point, do we even need to ask? Some of us have been here before, arguing, negotiating, surviving on caffeine and last minute research. 
-            
-            It has been four years since we dusted off our placards post lockdown and somehow, each edition has only gotten crazier (in the best way possible). The excitement never really faded and now, we’re here again , back to where it all begins. The brainstorming , the elaborate discussions, the never ending check lists , all leading up to yet another edition "GDMUN 2025"
-            
-            Will it be bigger? Probably. Bolder? Most definitely. More fun? Without a doubt.</p>
-    </div>
-    </div>
-
-    <!-- About Section -->
-    <section id="about" class="section">
-        <h2>Specialized Kits for Aspiring Artists, Entrepreneurs, and Personal Growth</h2>
-        <div class="cards">
-            <div class="card">
-                <h3>Artist Kits</h3>
-                <p>Comprehensive kits with all the essentials to unleash your creative potential.</p>
-            </div>
-            <div class="card">
-                <h3>Entrepreneur Kits</h3>
-                <p>Equip yourself with the tools and resources to turn your business ideas into reality.</p>
-            </div>
-            <div class="card">
-                <h3>Personal Growth Kits</h3>
-                <p>Discover kits designed to help you embark on your journey of self-discovery and transformation.</p>
+                    It has been four years since we dusted off our placards post lockdown and somehow, each edition has only gotten crazier (in the best way possible). The excitement never really faded and now, we’re here again, back to where it all begins. The brainstorming, the elaborate discussions, the never-ending checklists, all leading up to yet another edition—“GDMUN 2025.”
+                
+                    Will it be bigger? Probably. Bolder? Most definitely. More fun? Without a doubt.</p>
             </div>
         </div>
-    </section>
+    </div>
 
-    <!-- Registration Section -->
-    <section id="registration" class="section">
-        <h2>Expert-Crafted Online Courses</h2>
-        <div class="flow-chart">
-            <div class="flow-item">
-                <span class="flow-number">1</span>
-                <h3>Convenience</h3>
-                <p>Learn at your own pace from the comfort of your home.</p>
-            </div>
-            <div class="flow-arrow">→</div>
-            <div class="flow-item">
-                <span class="flow-number">2</span>
-                <h3>Interactivity</h3>
-                <p>Engage with course materials and connect with fellow learners.</p>
-            </div>
-            <div class="flow-arrow">→</div>
-            <div class="flow-item">
-                <span class="flow-number">3</span>
-                <h3>Expertise</h3>
-                <p>Benefit from the guidance of industry-leading instructors.</p>
-            </div>
-        </div>
-    </section>
-
-    <center>
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3354.876879968915!2d74.7627229742951!3d32.769001284398065!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391e88b3185b362b%3A0x16a83b53a4c38239!2sG.D%20Goenka%20Public%20School!5e0!3m2!1sen!2sin!4v1742125172177!5m2!1sen!2sin" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-    </center>
-
-    <!-- Footer -->
+    
     <footer>
-        <p>Created by <a href="https://github.com/SleeperOfSaturn">Sannidhya Sharma</a> | Hosted by GD Goenka, Jammu</p>
+        <p><a href="credits.html">Credits</a> | Hosted by GD Goenka, Jammu</p>
     </footer>
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <script>
         // Scene setup
@@ -302,7 +259,39 @@
             camera.aspect = width / height;
             camera.updateProjectionMatrix();
         });
-    </script>
+        function toggleMenu() {
+            const navMenu = document.getElementById("nav-menu");
+            navMenu.classList.toggle("show");
+        }
+    
+        function closeMenu() {
+            const navMenu = document.getElementById("nav-menu");
+            navMenu.classList.remove("show");
+        }
+    
+        // Close menu when clicking outside
+        document.addEventListener("click", function (event) {
+            const navMenu = document.getElementById("nav-menu");
+            const menuIcon = document.querySelector(".menu-icon");
+    
+            if (!navMenu.contains(event.target) && !menuIcon.contains(event.target)) {
+                navMenu.classList.remove("show");
+            }
+        });
+    
+        // Smooth Scroll Function
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    window.scrollTo({
+                        top: target.offsetTop - 50, // Adjust for header
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>    
 </body>
 </html>
-
