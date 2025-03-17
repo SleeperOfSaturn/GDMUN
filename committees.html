@@ -196,6 +196,23 @@
             </div>
         </div>
     </div>
+    <script>
+        function toggleMenu() {
+            const navMenu = document.getElementById("nav-menu");
+            navMenu.classList.toggle("show");
+        }
+        function closeMenu() {
+            const navMenu = document.getElementById("nav-menu");
+            navMenu.classList.remove("show");
+        }
+        document.addEventListener("click", function (event) {
+            const navMenu = document.getElementById("nav-menu");
+            const menuIcon = document.querySelector(".menu-icon");
+            if (!navMenu.contains(event.target) && !menuIcon.contains(event.target)) {
+                navMenu.classList.remove("show");
+            }
+        });
+    </script>
     <footer>
         <p><a href="credits.html">Credits</a> | Hosted by GD Goenka, Jammu</p>
     </footer>
