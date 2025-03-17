@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GDMUN'25 - Committees</title>
     <link rel="icon" type="png" href="logo.png">
+    <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Tinos:wght@400;700&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,79 +17,6 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-        }
-        html {
-            background-color: #000;
-            scroll-behavior: smooth;
-        }
-        body {
-            font-weight: 700;
-            color: #e0e0e0;
-            line-height: 1.6;
-            font-family: 'Rubik', sans-serif;
-        }
-        
-        /* Header */
-        .header {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            background-color: #171717;
-            padding: 1rem;
-            position: relative;
-        }
-        .logo {
-            height: 50px;
-        }
-        .menu-icon {
-            display: none;
-            flex-direction: column;
-            gap: 5px;
-            cursor: pointer;
-        }
-        .menu-icon div {
-            width: 30px;
-            height: 4px;
-            background-color: #a8a8a8;
-        }
-        
-        /* Dropdown Menu */
-        .nav {
-            display: flex;
-            gap: 15px;
-        }
-        .nav a {
-            color: #e0e0e0;
-            text-decoration: none;
-            font-size: 1rem;
-            cursor: pointer;
-        }
-        .nav a:hover {
-            color: #ecc55a;
-        }
-        
-        @media (max-width: 768px) {
-            .menu-icon {
-                display: flex;
-            }
-            .nav {
-                display: none;
-                position: absolute;
-                top: 60px;
-                right: 10px;
-                background-color: #171717;
-                border: 1px solid rgba(255, 255, 255, 0.2);
-                border-radius: 5px;
-                width: 150px;
-                flex-direction: column;
-            }
-            .nav.show {
-                display: flex;
-            }
-            .nav a {
-                padding: 10px;
-                text-align: center;
-            }
         }
         
         /* Wrapper */
