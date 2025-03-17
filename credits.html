@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GDMUN'25 - Credits</title>
     <link rel="icon" type="png" href="logo.png">
+    <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=League+Gothic&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Parisienne&display=swap" rel="stylesheet">
@@ -16,83 +17,12 @@
             padding: 0;
             box-sizing: border-box;
         }
-        html {
-            background-color: #000;
-            scroll-behavior: smooth;
-        }
-        body {
-            font-weight: 700;
-            color: #e0e0e0;
-            line-height: 1.6;
-            font-family: 'Rubik', sans-serif;
-        }
-        .header {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            background-color: #171717;
-            padding: 1rem;
-            position: relative;
-        }
-        .logo {
-            height: 50px;
-        }
-        .menu-icon {
-            display: none;
-            flex-direction: column;
-            gap: 5px;
-            cursor: pointer;
-        }
-        .menu-icon div {
-            width: 30px;
-            height: 4px;
-            background-color: #a8a8a8;
-        }
-        .nav {
-            display: flex;
-            gap: 15px;
-        }
-        .nav a {
-            color: #e0e0e0;
-            text-decoration: none;
-            font-size: 1rem;
-            cursor: pointer;
-        }
-        .nav a:hover {
-            color: #ecc55a;
-        }
         .credits-list a {
             color: #ecc55a;
             text-decoration: none;
         }
         .credits-list a:hover {
             text-decoration: underline;
-        }
-        @media (max-width: 768px) {
-            .menu-icon {
-                display: flex;
-            }
-            .nav {
-                display: none;
-                position: absolute;
-                top: 60px;
-                right: 0;
-                background-color: #171717;
-                border: 1px solid rgba(255, 255, 255, 0.2);
-                border-radius: 5px;
-                width: 100%;
-                flex-direction: column;
-                z-index: 1000;
-            }
-            .nav.show {
-                display: flex;
-            }
-            .nav a {
-                padding: 15px;
-                text-align: center;
-                display: block;
-                border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-            }
         }
         .content {
             text-align: center;
