@@ -325,7 +325,7 @@ class Slider {
     this.data.current = this.data.current === this.data.total ? 0 : this.data.current + 1;
     this.data.next = this.data.current === this.data.total ? 0 : this.data.current + 1;
   }
-
+  
   changeTexture() {
     this.mat.uniforms.texture1.value = this.textures[this.data.current];
     this.mat.uniforms.texture2.value = this.textures[this.data.next];
@@ -360,6 +360,8 @@ links.forEach(link => {
     link.classList.add('is-active');
   });
 });
-
+document.querySelector('.js-next-slide').addEventListener('click', () => {
+  slider.nextSlide();
+});
 // Init classes
 const slider = new Slider();
