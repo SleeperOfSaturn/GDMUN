@@ -1,0 +1,31 @@
+<div id="wrapper">
+        <h2 class="about-title">Committees</h2>
+        <div class="committees-container">
+            <div class="committee-box">
+                <img src="committee1.png" alt="Committee 1" class="committee-logo">
+                <p class="committee-name">UNSC</p>
+            </div>
+            <div class="committee-box">
+                <img src="committee2.png" alt="Committee 2" class="committee-logo">
+                <p class="committee-name">UNGA</p>
+            </div>
+            <div class="committee-box">
+                <img src="committee3.png" alt="Committee 3" class="committee-logo">
+                <p class="committee-name">UNHRC</p>
+            </div>
+            <div class="committee-box">
+                <img src="committee4.png" alt="Committee 4" class="committee-logo">
+                <p class="committee-name">DISEC</p>
+            </div>
+            <div class="committee-box">
+                <img src="committee5.png" alt="Committee 5" class="committee-logo">
+                <p class="committee-name">WHO</p>
+            </div>
+            <div class="committee-box">
+                <img src="committee6.png" alt="Committee 6" class="committee-logo">
+                <p class="committee-name">ICJ</p>
+            </div>
+        </div>
+    </div>
+    
+    
