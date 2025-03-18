@@ -3,20 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GDMUN'25 - Committees</title>
+    <title>GDMUN'25 - Contact Us</title>
     <link rel="icon" type="png" href="logo.png">
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Tinos:wght@400;700&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=League+Gothic&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Parisienne&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Tinos:wght@400;700&display=swap" rel="stylesheet">
     <style>
         /* Reset */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+        }
+        
+        /* Launch Screen */
+        .launch-screen {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            position: relative;
+            overflow: hidden;
+            text-align: center;
+            padding: 1rem;
+        }
+        .launch-screen-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('hall.jpg') center/cover no-repeat;
+            filter: blur(8px);
+            z-index: -1;
+        }
+        .title {
+            font-size: 4rem;
+            color: #ecc55a;
+            text-shadow: 1.5px 0 20px #101010;
+        }
+        @media (max-width: 768px) {
+            .title {
+                font-size: 2.5rem;
+            }
         }
         
         /* Wrapper */
@@ -43,35 +76,25 @@
             color: #a8a8a8;
         }
         
-        /* Committees Section */
-        .committees-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-            padding: 2rem;
+        /* Contact Section */
+        .contact-section {
             text-align: center;
+            padding: 2rem;
         }
-        .committee-box {
-            background-color: #222;
-            padding: 1rem;
-            border-radius: 10px;
-            position: relative;
-            overflow: hidden;
-            transition: transform 0.3s ease-in-out;
-        }
-        .committee-box:hover {
-            transform: scale(1.05);
-        }
-        .committee-logo {
-            width: 100px;
-            height: 100px;
+        .contact-title {
+            font-size: 2rem;
+            color: #ecc55a;
             margin-bottom: 1rem;
         }
-        .committee-name {
-            font-size: 1.2rem;
-            color: #ecc55a;
+        .contact-info {
+            font-size: 1rem;
+            color: #a8a8a8;
+            margin-bottom: 1rem;
         }
-        
+        iframe{
+            width: 100%;
+            height: 85vh;
+        }
         /* Footer */
         footer {
             text-align: center;
@@ -94,12 +117,12 @@
             <a href="team.html" onclick="closeMenu()">Team</a>
             <a href="committees.html" onclick="closeMenu()">Committees</a>
             <a href="registration.html" onclick="closeMenu()">Registration</a>
-            <a href="contact.html" onclick="closeMenu()">Contact Us</a>
         </div>
     </div>
-    
-    <iframe src="carousel.html" style="height: 80vh; width: 100%; border: none;"></iframe>
 
+    <div class="contact-section">
+        <iframe src="committees_slider.html"></iframe>
+    </div>
     <script>
         function toggleMenu() {
             const navMenu = document.getElementById("nav-menu");
@@ -117,8 +140,5 @@
             }
         });
     </script>
-    <footer>
-        <p><a href="credits.html">Credits</a> | Hosted by GD Goenka, Jammu</p>
-    </footer>
 </body>
 </html>
