@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GDMUN'25 - Committees</title>
+    <title>GDMUN'25 - committee Us</title>
     <link rel="icon" type="png" href="logo.png">
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -66,7 +66,6 @@
             font-size: 2rem;
             color: #ecc55a;
             text-shadow: 1px 0 10px #101010;
-            margin-bottom: 0.5rem;
         }
 
         /* Normal text styling */
@@ -76,24 +75,21 @@
             color: #a8a8a8;
         }
         
-        /* Contact Section */
-        .contact-section {
+        /* committee Section */
+        .committee-section {
             text-align: center;
-            padding: 2rem;
         }
-        .contact-title {
+        .committee-title {
             font-size: 2rem;
             color: #ecc55a;
-            margin-bottom: 1rem;
         }
-        .contact-info {
+        .committee-info {
             font-size: 1rem;
             color: #a8a8a8;
-            margin-bottom: 1rem;
         }
         iframe{
             width: 100%;
-            height: 85vh;
+            height: 92vh;
         }
         /* Footer */
         footer {
@@ -113,15 +109,15 @@
         </div>
         <div class="nav" id="nav-menu">
             <a href="index.html" onclick="closeMenu()">Home</a>
+            <a href="#wrapper" onclick="closeMenu()">About</a>
             <a href="team.html" onclick="closeMenu()">Team</a>
             <a href="committees.html" onclick="closeMenu()">Committees</a>
             <a href="registration.html" onclick="closeMenu()">Registration</a>
-            <a href="contact.html" onclick="closeMenu()">Contact Us</a>
         </div>
     </div>
 
-    <div class="contact-section">
-        <iframe src="committees_slider.html"></iframe>
+    <div class="committee-section">
+        <iframe src="committees_slider.html" style="border-width: 0px;"></iframe>
     </div>
     <script>
         function toggleMenu() {
