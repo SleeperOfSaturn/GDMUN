@@ -46,19 +46,28 @@
         }
         .trail {
             position: absolute;
-            width: 50px;
-            height: 50px;
-            background: radial-gradient(circle, rgba(236,197,90,0.8) 0%, rgba(255,105,180,0.6) 50%, rgba(75,0,130,0.6) 100%);
+            width: 70px;
+            height: 70px;
+            background: radial-gradient(circle, rgba(236,197,90,0.8) 0%, rgba(184,134,11,0.6) 50%, rgba(139,69,19,0.6) 100%);
             border-radius: 50%;
             pointer-events: none;
             opacity: 0.7;
-            filter: blur(15px);
+            filter: blur(20px);
             transition: transform 0.1s ease-out, opacity 0.3s;
             z-index: 1;
         }
         body {
             position: relative;
             overflow: hidden;
+        }
+        .logo-overlay {
+            position: absolute;
+            top: 63%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 40%;
+            opacity: 0.2;
+            z-index: 1;
         }
     </style>
 </head>
@@ -78,6 +87,7 @@
             <a href="contact.html">Contact Us</a>
         </div>
     </div>
+    <img src="logo_credits.png" alt="GDMUN'25 Logo" class="logo-overlay">
     <div class="content">
         <h1 class="title">Credits</h1>
         <p class="credits-list">Website Development: <a href="https://github.com/SleeperOfSaturn/">Sannidhya Sharma</a>, USG IT</p>
