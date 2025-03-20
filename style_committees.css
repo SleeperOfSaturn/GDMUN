@@ -134,6 +134,13 @@ ul, li {
   border-radius: 8px;
   border-width: 1px;
   color: #fff;
+  margin-right: 3px;
+}
+.committee-btn {
+  background-color: transparent;
+  border-radius: 8px;
+  border-width: 1px;
+  color: #fff;
 }
 .slider {
   position: absolute;
